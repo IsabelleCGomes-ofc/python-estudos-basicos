@@ -1,5 +1,3 @@
-from pythonBasico.TipoVariavel import salario
-
 fruta = input("digite uma fruta: ")
 print(fruta)
 
