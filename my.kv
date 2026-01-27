@@ -1,0 +1,129 @@
+<CreateAccountWindow>:
+    namee: namee
+    email: email
+    password: passw
+
+    FloatLayout:
+
+        Label:
+            text: "Create an Account"
+            size_hint: 0.8, 0.2
+            pos_hint: {"x": 0.1, "top": 1}
+            font_size: (root.width**2 + root.height**2) / 14**4
+
+        Label:
+            text: "Name:"
+            size_hint: 0.5, 0.12
+            pos_hint: {"x": 0, "top": 0.8}
+
+        TextInput:
+            id: namee
+            pos_hint: {"x": 0.5, "top": 0.8}
+            size_hint: 0.4, 0.12
+            multiline: False
+
+        Label:
+            text: "Email:"
+            size_hint: 0.5, 0.12
+            pos_hint: {"x": 0, "top": 0.67}
+
+        TextInput:
+            id: email
+            pos_hint: {"x": 0.5, "top": 0.67}
+            size_hint: 0.4, 0.12
+            multiline: False
+
+        Label:
+            text: "Password:"
+            size_hint: 0.5, 0.12
+            pos_hint: {"x": 0, "top": 0.54}
+
+        TextInput:
+            id: passw
+            pos_hint: {"x": 0.5, "top": 0.54}
+            size_hint: 0.4, 0.12
+            multiline: False
+            password: True
+
+        Button:
+            text: "Already have an Account? Log In"
+            pos_hint: {"x": 0.3, "y": 0.25}
+            size_hint: 0.4, 0.1
+            on_release: root.login()
+
+        Button:
+            text: "Submit"
+            pos_hint: {"x": 0.2, "y": 0.05}
+            size_hint: 0.6, 0.15
+            on_release: root.submit()
+
+
+<LoginWindow>:
+    email: email
+    password: password
+
+    FloatLayout:
+
+        Label:
+            text: "Email:"
+            pos_hint: {"x": 0.1, "top": 0.9}
+            size_hint: 0.35, 0.15
+
+        TextInput:
+            id: email
+            pos_hint: {"x": 0.45, "top": 0.9}
+            size_hint: 0.4, 0.15
+            multiline: False
+
+        Label:
+            text: "Password:"
+            pos_hint: {"x": 0.1, "top": 0.7}
+            size_hint: 0.35, 0.15
+
+        TextInput:
+            id: password
+            pos_hint: {"x": 0.45, "top": 0.7}
+            size_hint: 0.4, 0.15
+            multiline: False
+            password: True
+
+        Button:
+            text: "Login"
+            pos_hint: {"x": 0.2, "y": 0.05}
+            size_hint: 0.6, 0.2
+            on_release: root.loginBtn()
+
+        Button:
+            text: "Não tem uma conta? Bora criar!"
+            pos_hint: {"x": 0.3, "y": 0.3}
+            size_hint: 0.4, 0.1
+            on_release: root.createBtn()
+
+
+<MainWindow>:
+    n: n
+    email: email
+    created: created
+
+    FloatLayout:
+
+        Label:
+            id: n
+            pos_hint: {"x": 0.1, "top": 0.9}
+            size_hint: 0.8, 0.2
+
+        Label:
+            id: email
+            pos_hint: {"x": 0.1, "top": 0.7}
+            size_hint: 0.8, 0.2
+
+        Label:
+            id: created
+            pos_hint: {"x": 0.1, "top": 0.5}
+            size_hint: 0.8, 0.2
+
+        Button:
+            text: "Sair"
+            pos_hint: {"x": 0.2, "y": 0.1}
+            size_hint: 0.6, 0.2
+            on_release: root.logOut()

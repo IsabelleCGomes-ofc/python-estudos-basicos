@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# PyCharm: arquivos de configuração da IDE
+.idea/
+*.iml
+
+# Arquivos zip, binários, executáveis
+*.zip
+*.exe
+*.jar
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários e logs
+*.log
+*.tmpRar!��_VwVQ
+
+.venv/
+venv/
+
